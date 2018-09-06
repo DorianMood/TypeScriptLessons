@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"target": "es5",
+		"removeComments": true,
+		"outDir": "./js",
+		"sourceMap": true
+	},
+	"compileOnSave": true,
+	"exclude": [
+		"node_modules"
+	],
+	"files": [
+		"app.ts"
+	]
+}
