@@ -1,0 +1,22 @@
+React
+component, jsx
+props, state
+<Component value={} type={"text"} />
+
+Stateless function component SFC
+
+const Text = (props) => <div>{props}</div>
+
+class extends React.Component<propsType, stateType>
+
+// interface, type
+interface TextProps {
+	t: string
+}
+create-react-app typescript
+Handlebows
+eventbubbling
+
+destructurisation, spread operator
+
+algebraic data type ADT
