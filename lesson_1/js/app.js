@@ -135,7 +135,15 @@ function isAverageGreaterThenLength(_array) {
 arr = ARRAY;
 results.push(arr + " | " + arr.length + " : " + isAverageGreaterThenLength(arr));
 results.push("");
-results.push("");
+function executeBinaryOp(_function, _first, _second) {
+    return _function(_first, _second);
+}
+function twoArgs(_first, _second) {
+    return _first + _second;
+}
+var first = 1;
+var second = 2;
+results.push("first = " + first + ", second = " + second + ",\n\tf(first, second) = " + executeBinaryOp(twoArgs, first, second));
 var resultsDiv = this.document.getElementById("results");
 var element = this.document.createElement('li');
 for (var i = 0; i < results.length; i++) {

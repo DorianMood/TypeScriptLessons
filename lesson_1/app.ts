@@ -187,8 +187,17 @@ results.push(
 	);
 
 // ----------------------------------- EX 11 -----------------------------------
+function executeBinaryOp(_function: (a: number, b: number) => number, _first: number, _second: number) {
+	return _function(_first, _second);
+}
+function twoArgs(_first: number, _second: number) {
+	return _first + _second;
+}
+let first = 1;
+let second = 2;
 results.push(
-	``
+	`first = ${first}, second = ${second},
+	f(first, second) = ${executeBinaryOp(twoArgs, first, second)}`
 	);
 
 // ------------------------------ Print results --------------------------------
