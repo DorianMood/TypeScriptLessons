@@ -1,22 +1,29 @@
 import * as React from 'react';
 import './App.css';
+import { CounterSFC } from './CounterSFC';
 
-import logo from './logo.svg';
+export default class App extends React.Component<{}, { count: number }> {
 
-class App extends React.Component {
+  constructor() {
+    super({});
+    this.state = {
+      count: 0
+    };
+  }
+
+  public inc = () => { this.setState({ count: this.state.count + 1 }); }
+
+  public dec = () => { this.setState({ count: this.state.count - 1 }); }
+
   public render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
+      <div className='container'>
+        <CounterSFC
+          count={ this.state.count }
+          onIncrement={ this.inc }
+          onDecrement={ this.dec }
+        />
       </div>
     );
   }
 }
-
-export default App;
