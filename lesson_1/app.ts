@@ -181,13 +181,33 @@ results.push(
 	`${arr} | ${arr.length} : ${isAverageGreaterThenLength(arr)}`
 	);
 
-// ----------------------------------- EX 10 -----------------------------------
+// ----------------------------------- EX 10 -----------------------------------\
+function isPrime(_n: number) {
+	if (_n > 100)
+		return 'TOO BIG NUMBER!';
+	else {
+		for (let i = 2; i < _n / 2; i++)
+			if (_n % i === 0)
+				return false;
+	}
+	return true;
+}
+
+let prime = 97;
+let notPrime = 98;
+let big = 102;
+
 results.push(
-	``
+	`
+	${prime} isPrime ? ${isPrime(prime)}
+	${notPrime} isPrime ? ${isPrime(notPrime)}
+	${big} isPrime ? ${isPrime(big)}
+	`
 	);
 
 // ----------------------------------- EX 11 -----------------------------------
-function executeBinaryOp(_function: (a: number, b: number) => number, _first: number, _second: number) {
+function executeBinaryOp(_function: (a: number, b: number) => number,
+										_first: number, _second: number) {
 	return _function(_first, _second);
 }
 function twoArgs(_first: number, _second: number) {

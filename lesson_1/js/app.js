@@ -134,7 +134,20 @@ function isAverageGreaterThenLength(_array) {
 }
 arr = ARRAY;
 results.push(arr + " | " + arr.length + " : " + isAverageGreaterThenLength(arr));
-results.push("");
+function isPrime(_n) {
+    if (_n > 100)
+        return 'TOO BIG NUMBER!';
+    else {
+        for (var i = 2; i < _n / 2; i++)
+            if (_n % i === 0)
+                return false;
+    }
+    return true;
+}
+var prime = 97;
+var notPrime = 98;
+var big = 102;
+results.push("\n\t" + prime + " isPrime ? " + isPrime(prime) + "\n\t" + notPrime + " isPrime ? " + isPrime(notPrime) + "\n\t" + big + " isPrime ? " + isPrime(big) + "\n\t");
 function executeBinaryOp(_function, _first, _second) {
     return _function(_first, _second);
 }
