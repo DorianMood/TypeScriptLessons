@@ -1,5 +1,6 @@
 import * as React from 'react';
 import './App.css';
+import { Counter } from './Counter';
 import { CounterSFC } from './CounterSFC';
 
 export default class App extends React.Component<{}, { count: number }> {
@@ -18,11 +19,20 @@ export default class App extends React.Component<{}, { count: number }> {
   public render() {
     return (
       <div className='container'>
-        <CounterSFC
-          count={ this.state.count }
-          onIncrement={ this.inc }
-          onDecrement={ this.dec }
-        />
+        <div className='row'>
+          <div className='col-md-6'>
+            <CounterSFC
+              count={ this.state.count }
+              onIncrement={ this.inc }
+              onDecrement={ this.dec }
+            />
+          </div>
+          <div className='col-md-6'>
+            <Counter
+              start={ 0 }
+            />
+          </div>
+        </div>
       </div>
     );
   }
